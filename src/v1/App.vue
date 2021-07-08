@@ -4,7 +4,7 @@
     <app-alert
       v-if="alert"
       title="Внимание!"
-      text="Это действие запрещено для данной страницы. Закройте её немедленно!"
+      text="Это действие запрещено для данной страницы."
       type="danger"
       :closable="true"
       @close="alert = false"
@@ -16,12 +16,14 @@
       </button>
     </div>
 
+    <app-block></app-block>
   </div>
 </template>
 
 <script>
 
 import AppAlert from "./components/AppAlert.vue";
+import AppBlock from "./components/AppBlock.vue";
 
 export default {
   data() {
@@ -35,11 +37,7 @@ export default {
     }
   },
   components: {
-    AppAlert
+    AppAlert, AppBlock
   }, 
 };
 </script>
-
-<style>
-  
-</style>
